@@ -36,9 +36,7 @@
         </div>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4 menu">
-             <router-link class="text-green-50 text-sm font-medium rounded-md hover:bg-green-700 hover:text-white px-3 py-2" to="/">Home</router-link>
-            <!-- Current: "bg-green-900 text-white", Default: "text-green-50 hover:bg-green-700 hover:text-white" -->
-             <router-link class="text-green-50 text-sm font-medium rounded-md hover:bg-green-700 hover:text-white px-3 py-2" to="/cart">Cart</router-link>
+             <router-link v-for="item in menu" class="text-green-50 text-sm font-medium rounded-md hover:bg-green-700 hover:text-white px-3 py-2" :to="item.url">{{item.name}}</router-link>
           </div>
         </div>
       </div>
@@ -60,13 +58,7 @@
   <div class="sm:hidden" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1">
       <!-- Current: "bg-green-900 text-white", Default: "text-green-50 hover:bg-green-700 hover:text-white" -->
-      <a href="#" class="bg-green-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-
-      <a href="#" class="text-green-50 hover:bg-green-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-
-      <a href="#" class="text-green-50 hover:bg-green-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-
-      <a href="#" class="text-green-50 hover:bg-green-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+      <router-link v-for="item in menu" class="text-green-50 hover:bg-green-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" :to="item.url">{{item.name}}</router-link>
     </div>
   </div>
 </nav>
@@ -78,4 +70,13 @@ import { computed } from '@vue/reactivity';
 import { useStore } from 'vuex';
 const store = useStore();
 const cart = computed(() => store.getters.cart);
+const menu = [{
+  url:'/',
+  name:'Home'
+},
+{
+  url:'/cart',
+  name:'Cart'
+}
+]
 </script>

@@ -40,7 +40,7 @@ const placeOrder = () => {
         <div
           v-for="ca in cart"
           :key="ca.id"
-          class="mb-16 grid grid-cols-4 gap-4"
+          class="mb-16 grid grid-cols-1 gap-4 md:grid-cols-3"
         >
           <div>
             <img
@@ -53,7 +53,9 @@ const placeOrder = () => {
             <p class="w-full text-xl font-light my-5 text-gray-400 text-left">Harga satuan : ${{ca.price}}</p>
             <p class="w-full font-bold text-xl my-5 text-gray-600 text-left">Total : <span class="text-green-500">${{ ca.price * ca.qty }}</span></p>
           </div>
-          <div class="flex flex-wrap items-center">
+          <div class="grid grid-cols-3">
+          
+          <div class="col-span-2 flex flex-wrap items-center">
               
             <div class="flex justify-between items-center w-full">
               <button
@@ -130,6 +132,7 @@ const placeOrder = () => {
                 />
               </svg>
             </button>
+          </div>
           </div>
         </div>
         <div class="grid items-center grid-cols-1 md:grid-cols-2">

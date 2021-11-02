@@ -8,10 +8,12 @@ import Cart from "../pages/Cart.vue";
 const routes = [
   {
     path: "/",
+    name:"Home",
     component: home,
   },
   {
     path: "/cart",
+    name:"Cart",
     component: Cart,
   },
   {
@@ -22,7 +24,7 @@ const routes = [
 },
 ];
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/vue-shopping-cart/'),
     routes,
     linkActiveClass:'bg-green-900'
   });
