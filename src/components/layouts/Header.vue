@@ -1,6 +1,6 @@
 <template>
     <div class="container flex flex-wrap mx-auto my-40 px-5 min-h-96 items-center">
-        <h1 class="header-font mb-20 text-8xl text-left font-bold">Selamat datang di Mamang shop</h1>
+        <h1 class="header-font mb-20 text-6xl text-center font-bold md:text-8xl md:text-left">Selamat datang di Mamang shop</h1>
       <p class="text-gray-400">Web ini dibuat menggunakan Vue,Vuex,Tailwind</p>
     </div>
 </template>

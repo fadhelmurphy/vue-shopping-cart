@@ -29,7 +29,7 @@ const placeOrder= ()=> {
 <template>
   <div class="container my-12 mx-auto px-4 md:px-12">
     <div class="my-16 text-center">
-      <h1 class="text-8xl font-bold">Produk</h1>
+      <h1 class="font-bold text-6xl md:text-8xl">Produk</h1>
       <p class="my-10 text-gray-400">Daftar Produk yang kami jual</p>
     </div>
     <div class="grid grid-cols-1">

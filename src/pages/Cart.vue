@@ -33,7 +33,7 @@ const placeOrder = () => {
   <LayoutVue>
     <template v-slot:content>
       <div class="container my-12 mx-auto px-4 md:px-12">
-        <h3 class="text-8xl font-bold text-left">Keranjang</h3>
+        <h3 class="text-6xl font-bold text-left md:text-8xl">Keranjang</h3>
         <p class="text-xl my-10 text-gray-400 text-left">
           Anda memiliki {{ cart.length }} produk pada cart.
         </p>
